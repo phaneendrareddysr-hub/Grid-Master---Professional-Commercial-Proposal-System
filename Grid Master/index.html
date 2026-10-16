@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GridMaster - Sales & Tendering Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="header-left">
+                <div class="logo">
+                    <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="14" width="7" height="7"></rect>
+                        <rect x="3" y="14" width="7" height="7"></rect>
+                    </svg>
+                    <span class="logo-text">GridMaster</span>
+                </div>
+            </div>
+            <nav class="header-nav">
+                <button type="button" class="nav-tab active" data-tab="opportunities">Opportunities</button>
+                <button type="button" class="nav-tab" data-tab="dashboard">Dashboard</button>
+                <button type="button" class="nav-tab" data-tab="fcm-sheet">FCM Sheet</button>
+                <button type="button" class="nav-tab" data-tab="project-management">Projects</button>
+                <button type="button" class="nav-tab" data-tab="product-registrations">Products</button>
+                <button type="button" class="nav-tab" data-tab="approvals">Approvals</button>
+                <button type="button" class="nav-tab" data-tab="tender-analysis">Tender Analysis</button>
+                <button type="button" class="nav-tab" data-tab="ai-features">AI Features</button>
+                <button type="button" class="nav-tab" data-tab="reference">Reference</button>
+            </nav>
+            <div class="header-right">
+                <button class="icon-btn" title="Settings">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="1"></circle>
+                        <path d="M12 1v6m0 6v6M4.22 4.22l4.24 4.24m2.98 2.98l4.24 4.24M1 12h6m6 0h6m-17.78 7.78l4.24-4.24m2.98-2.98l4.24-4.24"></path>
+                    </svg>
+                </button>
+                <div class="user-profile">
+                    <div class="user-avatar">R</div>
+                    <span class="user-name">Naga Phaneendra Reddy</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <!-- Opportunities Tab -->
+        <section class="tab-content active" data-tab="opportunities">
+            <div class="content-header">
+                <h1>Opportunities</h1>
+                <button class="btn btn-primary">+ New Opportunity</button>
+            </div>
+
+            <div class="filters-bar">
+                <input type="text" placeholder="Search opportunities..." class="search-input">
+                <select class="filter-select">
+                    <option>All Status</option>
+                    <option>Prospecting</option>
+                    <option>Qualification</option>
+                    <option>Proposal</option>
+                    <option>Negotiation</option>
+                    <option>Won</option>
+                    <option>Lost</option>
+                </select>
+            </div>
+
+            <div class="table-container">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Opportunity ID</th>
+                            <th>Project Name</th>
+                            <th>Customer</th>
+                            <th>Value</th>
+                            <th>Status</th>
+                            <th>Due Date</th>
+                            <th>Owner</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>OPP-001</td>
+                            <td>Delhi Metro Phase-3</td>
+                            <td>Delhi Metro Rail Corp</td>
+                            <td>₹45,50,000</td>
+                            <td><span class="badge badge-info">Proposal</span></td>
+                            <td>2026-10-15</td>
+                            <td>Rajesh Kumar</td>
+                            <td><button class="btn-link">View</button></td>
+                        </tr>
+                        <tr>
+                            <td>OPP-002</td>
+                            <td>Mumbai Smart Grid</td>
+                            <td>Reliance Power</td>
+                            <td>₹78,90,000</td>
+                            <td><span class="badge badge-success">Won</span></td>
+                            <td>2026-09-20</td>
+                            <td>Priya Sharma</td>
+                            <td><button class="btn-link">View</button></td>
+                        </tr>
+                        <tr>
+                            <td>OPP-003</td>
+                            <td>Chennai Substation Upgrade</td>
+                            <td>Tamil Nadu Genco</td>
+                            <td>₹32,10,000</td>
+                            <td><span class="badge badge-warning">Negotiation</span></td>
+                            <td>2026-11-05</td>
+                            <td>Amit Verma</td>
+                            <td><button class="btn-link">View</button></td>
+                        </tr>
+                        <tr>
+                            <td>OPP-004</td>
+                            <td>Bangalore Data Center</td>
+                            <td>Equinix India</td>
+                            <td>₹55,75,000</td>
+                            <td><span class="badge badge-danger">Lost</span></td>
+                            <td>2026-09-30</td>
+                            <td>Neha Patel</td>
+                            <td><button class="btn-link">View</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Dashboard Tab -->
+        <section class="tab-content" data-tab="dashboard">
+            <div class="content-header">
+                <h1>Dashboard</h1>
+                <div class="date-range-selector">
+                    <select class="filter-select">
+                        <option>This Month</option>
+                        <option>Last Month</option>
+                        <option>Last Quarter</option>
+                        <option>Last Year</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="dashboard-grid">
+                <div class="metric-card">
+                    <div class="metric-header">
+                        <h3>Open Opportunities</h3>
+                        <svg class="metric-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                        </svg>
+                    </div>
+                    <div class="metric-value">14</div>
+                    <div class="metric-change positive">↑ 2 from last month</div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-header">
+                        <h3>Submitted Offers</h3>
+                        <svg class="metric-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                        </svg>
+                    </div>
+                    <div class="metric-value">23</div>
+                    <div class="metric-change positive">↑ 5 from last month</div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-header">
+                        <h3>Win Rate</h3>
+                        <svg class="metric-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 2.2"></path>
+                        </svg>
+                    </div>
+                    <div class="metric-value">62%</div>
+                    <div class="metric-change positive">↑ 8% from last quarter</div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-header">
+                        <h3>Revenue</h3>
+                        <svg class="metric-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="1" x2="12" y2="23"></line>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                        </svg>
+                    </div>
+                    <div class="metric-value">₹2.8Cr</div>
+                    <div class="metric-change positive">↑ ₹35L from last month</div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-header">
+                        <h3>Pipeline Value</h3>
+                        <svg class="metric-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 9h12M6 9a3 3 0 0 1 3-3h6a3 3 0 0 1 3 3M6 9v6a3 3 0 0 0 3 3h6a3 3 0 0 0 3-3V9"></path>
+                        </svg>
+                    </div>
+                    <div class="metric-value">₹5.2Cr</div>
+                    <div class="metric-change neutral">→ Same as last month</div>
+                </div>
+            </div>
+
+            <div class="charts-grid">
+                <div class="card">
+                    <h3>Product Distribution</h3>
+                    <div class="chart-placeholder">
+                        <svg viewBox="0 0 200 200" class="pie-chart">
+                            <circle cx="100" cy="100" r="80" fill="none" stroke="#3B82F6" stroke-width="50" stroke-dasharray="62.8 251.2"/>
+                            <circle cx="100" cy="100" r="80" fill="none" stroke="#22C55E" stroke-width="50" stroke-dasharray="62.8 251.2" style="transform: rotate(90deg); transform-origin: 100px 100px;"/>
+                            <circle cx="100" cy="100" r="80" fill="none" stroke="#F59E0B" stroke-width="50" stroke-dasharray="62.8 251.2" style="transform: rotate(180deg); transform-origin: 100px 100px;"/>
+                            <circle cx="100" cy="100" r="80" fill="none" stroke="#EF4444" stroke-width="50" stroke-dasharray="62.8 251.2" style="transform: rotate(270deg); transform-origin: 100px 100px;"/>
+                            <text x="100" y="108" text-anchor="middle" font-size="24" font-weight="bold" fill="#F8FAFC">25%</text>
+                        </svg>
+                    </div>
+                    <div class="legend">
+                        <div class="legend-item"><span class="legend-color" style="background:#3B82F6;"></span>AIS</div>
+                        <div class="legend-item"><span class="legend-color" style="background:#22C55E;"></span>GIS</div>
+                        <div class="legend-item"><span class="legend-color" style="background:#F59E0B;"></span>Substation</div>
+                        <div class="legend-item"><span class="legend-color" style="background:#EF4444;"></span>Other</div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Opportunity Status</h3>
+                    <div class="chart-placeholder">
+                        <canvas width="300" height="250"></canvas>
+                    </div>
+                    <div class="legend">
+                        <div class="legend-item"><span class="legend-color" style="background:#22C55E;"></span>Won</div>
+                        <div class="legend-item"><span class="legend-color" style="background:#EF4444;"></span>Lost</div>
+                        <div class="legend-item"><span class="legend-color" style="background:#3B82F6;"></span>Submitted</div>
+                        <div class="legend-item"><span class="legend-color" style="background:#F59E0B;"></span>Revalidated</div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Revenue by Customer</h3>
+                    <div class="revenue-list">
+                        <div class="revenue-item">
+                            <span>Delhi Metro Rail Corp</span>
+                            <span class="revenue-amount">₹1.2Cr</span>
+                        </div>
+                        <div class="revenue-item">
+                            <span>Reliance Power</span>
+                            <span class="revenue-amount">₹78L</span>
+                        </div>
+                        <div class="revenue-item">
+                            <span>Tamil Nadu Genco</span>
+                            <span class="revenue-amount">₹65L</span>
+                        </div>
+                        <div class="revenue-item">
+                            <span>Power Grid Corp</span>
+                            <span class="revenue-amount">₹52L</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Win/Loss Analysis</h3>
+                    <div class="win-loss-chart">
+                        <div class="win-loss-item">
+                            <div class="win-loss-bar">
+                                <div class="win-portion" style="width: 62%;"></div>
+                                <div class="loss-portion" style="width: 38%;"></div>
+                            </div>
+                            <div class="win-loss-labels">
+                                <span class="win-label">Won: 62%</span>
+                                <span class="loss-label">Lost: 38%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FCM Sheet Tab -->
+        <section class="tab-content" data-tab="fcm-sheet">
+            <div class="content-header">
+                <h1>FCM Sheet - Professional Commercial Proposal</h1>
+                <div class="header-buttons">
+                    <button class="btn btn-secondary">Save Draft</button>
+                    <button class="btn btn-secondary">Preview Offer</button>
+                    <button class="btn btn-primary">Generate Offer</button>
+                </div>
+            </div>
+
+            <div class="form-container">
+                <!-- 1. CUSTOMER INFORMATION -->
+                <div class="collapsible-section expanded">
+                    <div class="section-header">
+                        <h2>
+                            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                            Customer Information
+                        </h2>
+                    </div>
+                    <div class="section-content">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label>Company</label>
+                                <input type="text" placeholder="Enter company name" value="ABC Power Systems Ltd" class="cust-company">
+                            </div>
+                            <div class="form-group">
+                                <label>Customer Name</label>
+                                <input type="text" placeholder="Enter customer name" value="Ravindra Sharma" class="cust-name">
+                            </div>
+                            <div class="form-group">
+                                <label>Customer Email</label>
+                                <input type="email" placeholder="Enter email" value="ravindra@abcpower.com" class="cust-email">
+                            </div>
+                            <div class="form-group">
+                                <label>Customer Phone</label>
+                                <input type="tel" placeholder="Enter phone number" value="+91 98765 43210" class="cust-phone">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. PROJECT & REQUIREMENTS CONTEXT -->
+                <div class="collapsible-section expanded">
+                    <div class="section-header">
+                        <h2>
+                            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                            Project & Requirements Context
+                        </h2>
+                    </div>
+                    <div class="section-content">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label>Project Name</label>
+                                <input type="text" placeholder="Enter project name" value="Bangalore Smart Grid Phase-2" class="proj-name">
+                            </div>
+                            <div class="form-group">
+                                <label>End User</label>
+                                <input type="text" placeholder="Enter end user" value="Karnataka Power Corporation" class="proj-enduser">
+                            </div>
+                            <div class="form-group">
+                                <label>Customer Industry/Segment</label>
+                                <select class="proj-industry">
+                                    <option>Power Generation</option>
+                                    <option>Power Distribution</option>
+                                    <option>Power Transmission</option>
+                                    <option>Railways</option>
+                                    <option>Industrial</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Project Type</label>
+                                <select class="proj-type">
+                                    <option>New Project</option>
+                                    <option>Expansion</option>
+                                    <option>Replacement</option>
+                                    <option>Retrofit</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Project Location</label>
+                                <input type="text" placeholder="City, State" value="Bangalore, Karnataka" class="proj-location">
+                            </div>
+                            <div class="form-group">
+                                <label>Voltage Level</label>
+                                <input type="text" placeholder="e.g., 33kV, 132kV, 230kV, 400kV" value="132kV" class="proj-voltage">
+                            </div>
+                            <div class="form-group full-width">
+                                <label>Customer's Main Requirement</label>
+                                <textarea placeholder="Describe the primary customer need" rows="2" class="proj-requirement">Grid modernization with increased capacity and reliability</textarea>
+                            </div>
+                            <div class="form-group full-width">
+                                <label>Customer Priorities (select multiple)</label>
+                                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
+                                    <label><input type="checkbox" value="Reliability" checked> Reliability</label>
+                                    <label><input type="checkbox" value="Early Delivery"> Early Delivery</label>
+                                    <label><input type="checkbox" value="Automation"> Automation</label>
+                                    <label><input type="checkbox" value="Space Optimization"> Space Optimization</label>
+                                    <label><input type="checkbox" value="Cost Optimization"> Cost Optimization</label>
+                                    <label><input type="checkbox" value="Future Expansion"> Future Expansion</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Application/Use Case</label>
+                                <input type="text" placeholder="e.g., Grid interconnection, Substation upgrade" value="Grid Interconnection" class="proj-application">
+                            </div>
+                            <div class="form-group">
+                                <label>Expected Delivery Date</label>
+                                <input type="date" class="proj-delivery">
+                            </div>
+                            <div class="form-group full-width">
+                                <label>Special Customer Requirements</label>
+                                <textarea placeholder="Any special technical or commercial requirements" rows="2" class="proj-special"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. EXECUTIVE SUMMARY & VALUE PROPOSITION -->
+                <div class="collapsible-section expanded">
+                    <div class="section-header">
+                        <h2>
+                            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                            Executive Summary & Value Proposition
+                        </h2>
+                    </div>
+                    <div class="section-content">
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <label>Proposal Headline</label>
+                                <input type="text" placeholder="Brief, compelling headline for the proposal" value="Integrated High-Voltage Solution for Bangalore Smart Grid" class="exec-headline">
+                            </div>
+                            <div class="form-group full-width">
+                                <label>Executive Summary (Customer-Focused)</label>
+                                <textarea placeholder="2-3 sentences describing what you're proposing and benefits" rows="3" class="exec-summary">We propose a comprehensive, modular 132kV switchgear solution designed to support grid modernization with enhanced reliability, reduced environmental footprint, and operational flexibility for future expansion.</textarea>
+                            </div>
+                            <div class="form-group full-width">
+                                <label>Main Value Proposition</label>
+                                <textarea placeholder="Core value delivered to customer" rows="2" class="exec-value">Compact, reliable infrastructure enabling seamless grid integration with minimal installation time and space requirements</textarea>
+                            </div>
+                            <div class="form-group full-width">
+                                <label>Key Solution Benefits (max 5, one per line)</label>
+                                <textarea placeholder="Enhanced reliability&#10;Faster deployment&#10;Space optimization&#10;Future-ready design&#10;Reduced lifecycle costs" rows="5" class="exec-benefits">Enhanced grid reliability and uptime
+Accelerated project timeline with modular deployment
+Optimized use of substation real estate
+Future expansion capabilities with no re-engineering
+Total cost of ownership reduction through efficient operations</textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. TENDERING ENGINEER -->
+                <div class="collapsible-section expanded">
+                    <div class="section-header">
+                        <h2>
+                            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                            Tendering Engineer
+                        </h2>
+                    </div>
+                    <div class="section-content">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label>Name</label>
+                                <input type="text" placeholder="Enter engineer name" value="Vikram Sinha" class="eng-name">
+                            </div>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" placeholder="Enter email" value="vikram@abcpower.com" class="eng-email">
+                            </div>
+                            <div class="form-group">
+                                <label>Phone</label>
+                                <input type="tel" placeholder="Enter phone number" value="+91 98765 98765" class="eng-phone">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. QUOTATION & COMMERCIAL INFORMATION -->
+                <div class="collapsible-section expanded">
+                    <div class="section-header">
+                        <h2>
+                            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                            Quotation & Commercial Information
+                        </h2>
+                    </div>
+                    <div class="section-content">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label>Opportunity Number</label>
+                                <input type="text" placeholder="OPP-XXX" value="OPP-005" class="quot-oppnumber">
+                            </div>
+                            <div class="form-group">
+                                <label>Revision History</label>
+                                <input type="text" placeholder="Rev 1.0" value="Rev 1.2" class="quot-revision">
+                            </div>
+                            <div class="form-group">
+                                <label>Account Manager</label>
+                                <input type="text" placeholder="Enter account manager" value="Priya Sharma" class="quot-manager">
+                            </div>
+                            <div class="form-group">
+                                <label>T&C Template</label>
+                                <select class="quot-tctemplate">
+                                    <option>Standard 2024</option>
+                                    <option>Government</option>
+                                    <option>Private Sector</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Discount %</label>
+                                <input type="number" placeholder="0" value="0" min="0" max="100" class="comm-discount">
+                            </div>
+                            <div class="form-group">
+                                <label>Freight & Insurance</label>
+                                <input type="number" placeholder="Amount" value="0" class="comm-freight">
+                            </div>
+                            <div class="form-group">
+                                <label>Installation & Commissioning Charges</label>
+                                <input type="number" placeholder="Amount" value="0" class="comm-installation">
+                            </div>
+                            <div class="form-group">
+                                <label>Price Validity (Days)</label>
+                                <input type="number" placeholder="30" value="30" class="comm-validity">
+                            </div>
+                            <div class="form-group">
+                                <label>Price Basis</label>
+                                <select class="comm-basis">
+                                    <option>Factory Ex-Works</option>
+                                    <option>CIF Port</option>
+                                    <option>Delivered to Site</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. PRODUCTS TABLE (ENHANCED) -->
+                <div class="collapsible-section expanded">
+                    <div class="section-header">
+                        <h2>
+                            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                            Products & Scope
+                        </h2>
+                        <button class="btn btn-small btn-secondary">+ Add Product</button>
+                    </div>
+                    <div class="section-content">
+                        <div class="table-container">
+                            <table class="products-table">
+                                <thead>
+                                    <tr>
+                                        <th>Product</th>
+                                        <th>Description</th>
+                                        <th>Category</th>
+                                        <th>Scope Status</th>
+                                        <th>Qty</th>
+                                        <th>Factory Price</th>
+                                        <th>Margin %</th>
+                                        <th>Selling Price</th>
+                                        <th>Total</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="product-row">
+                                        <td><input type="text" value="33kV AIS" class="product-input prod-name"></td>
+                                        <td><input type="text" value="3-Bay Configuration - Reliable outdoor switching" class="product-input prod-description"></td>
+                                        <td><select class="product-input prod-category"><option>Power Distribution</option><option>High Voltage Infrastructure</option></select></td>
+                                        <td><select class="product-input prod-scope"><option selected>Included</option><option>Optional</option><option>Available on Request</option><option>Excluded</option></select></td>
+                                        <td><input type="number" value="2" class="product-input quantity"></td>
+                                        <td><input type="number" value="25000000" class="product-input factory-price"></td>
+                                        <td><input type="number" value="25" class="product-input margin-percent" min="0" max="100"></td>
+                                        <td><input type="number" value="31250000" class="product-input selling-price" readonly></td>
+                                        <td><input type="number" value="62500000" class="product-input total-price" readonly></td>
+                                        <td><button class="btn-link btn-delete">Delete</button></td>
+                                    </tr>
+                                    <tr class="product-row">
+                                        <td><input type="text" value="132kV GIS" class="product-input prod-name"></td>
+                                        <td><input type="text" value="2-Module Setup - Compact high-voltage switching with integrated monitoring" class="product-input prod-description"></td>
+                                        <td><select class="product-input prod-category"><option selected>High Voltage Infrastructure</option><option>Power Distribution</option></select></td>
+                                        <td><select class="product-input prod-scope"><option selected>Included</option><option>Optional</option><option>Available on Request</option><option>Excluded</option></select></td>
+                                        <td><input type="number" value="1" class="product-input quantity"></td>
+                                        <td><input type="number" value="45000000" class="product-input factory-price"></td>
+                                        <td><input type="number" value="20" class="product-input margin-percent" min="0" max="100"></td>
+                                        <td><input type="number" value="54000000" class="product-input selling-price" readonly></td>
+                                        <td><input type="number" value="54000000" class="product-input total-price" readonly></td>
+                                        <td><button class="btn-link btn-delete">Delete</button></td>
+                                    </tr>
+                                    <tr class="product-row">
+                                        <td><input type="text" value="Protection & Control" class="product-input prod-name"></td>
+                                        <td><input type="text" value="IED & Automation Package - Advanced grid protection and monitoring" class="product-input prod-description"></td>
+                                        <td><select class="product-input prod-category"><option selected>Intelligent Protection</option><option>Power Distribution</option></select></td>
+                                        <td><select class="product-input prod-scope"><option selected>Included</option><option>Optional</option><option>Available on Request</option><option>Excluded</option></select></td>
+                                        <td><input type="number" value="1" class="product-input quantity"></td>
+                                        <td><input type="number" value="8000000" class="product-input factory-price"></td>
+                                        <td><input type="number" value="30" class="product-input margin-percent" min="0" max="100"></td>
+                                        <td><input type="number" value="10400000" class="product-input selling-price" readonly></td>
+                                        <td><input type="number" value="10400000" class="product-input total-price" readonly></td>
+                                        <td><button class="btn-link btn-delete">Delete</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="totals-section">
+                            <div class="total-row">
+                                <span>Subtotal (Base Scope)</span>
+                                <span class="total-amount" id="subtotal">₹1,26,90,000</span>
+                            </div>
+                            <div class="total-row">
+                                <span>Subtotal (Optional)</span>
+                                <span class="total-amount" id="subtotal-optional">₹0</span>
+                            </div>
+                            <div class="total-row">
+                                <span>Discount</span>
+                                <span class="total-amount" id="discount">₹0</span>
+                            </div>
+                            <div class="total-row">
+                                <span>Freight & Insurance</span>
+                                <span class="total-amount" id="freight">₹0</span>
+                            </div>
+                            <div class="total-row">
+                                <span>Installation & Commissioning</span>
+                                <span class="total-amount" id="installation">₹0</span>
+                            </div>
+                            <div class="total-row">
+                                <span><strong>Subtotal Before Tax</strong></span>
+                                <span class="total-amount" id="subtotal-tax"><strong>₹1,26,90,000</strong></span>
+                            </div>
+                            <div class="total-row">
+                                <span>Tax (18% GST)</span>
+                                <span class="total-amount" id="tax">₹22,84,200</span>
+                            </div>
+                            <div class="total-row grand">
+                                <span><strong>Grand Total (Including Tax)</strong></span>
+                                <span class="total-amount" id="grand-total"><strong>₹1,49,74,200</strong></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. COMMERCIAL TERMS & CONDITIONS -->
+                <div class="collapsible-section">
+                    <div class="section-header">
+                        <h2>
+                            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                            Commercial Terms & Conditions
+                        </h2>
+                    </div>
+                    <div class="section-content">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label>Offer Validity (Days)</label>
+                                <input type="number" placeholder="30" value="30" class="terms-validity">
+                            </div>
+                            <div class="form-group">
+                                <label>Delivery Period (Weeks)</label>
+                                <input type="number" placeholder="Weeks from order" value="16" class="terms-delivery">
+                            </div>
+                            <div class="form-group">
+                                <label>Payment Terms</label>
+                                <input type="text" placeholder="e.g., 30-30-40 or On Order/30 days post delivery" value="30-30-40" class="terms-payment">
+                            </div>
+                            <div class="form-group">
+                                <label>Warranty Period (Months)</label>
+                                <input type="number" placeholder="24" value="24" class="terms-warranty">
+                            </div>
+                            <div class="form-group">
+                                <label>Installation Responsibility</label>
+                                <select class="terms-installation">
+                                    <option selected>Supplier responsibility with customer support</option>
+                                    <option>Customer responsibility</option>
+                                    <option>Joint responsibility</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Testing & Commissioning Scope</label>
+                                <input type="text" placeholder="Factory acceptance test, site commissioning" value="FAT included; SAT and commissioning as per scope" class="terms-testing">
+                            </div>
+                            <div class="form-group">
+                                <label>Training Included</label>
+                                <select class="terms-training">
+                                    <option selected>Yes - Operator training at site (3 days)</option>
+                                    <option>Available as optional service</option>
+                                    <option>No</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Documentation Provided</label>
+                                <input type="text" placeholder="Technical manuals, spare parts list, etc." value="Technical manuals, SLDs, spare parts catalogues, maintenance schedules" class="terms-documentation">
+                            </div>
+                            <div class="form-group full-width">
+                                <label>Included Services</label>
+                                <textarea placeholder="Transportation, installation, commissioning, training, warranty, etc." rows="3" class="terms-included">Transportation to site (CIF)
+Factory testing and inspection
+Site installation and commissioning
+Operator training (5 days on-site)
+24-month defects warranty
+Technical support during warranty</textarea>
+                            </div>
+                            <div class="form-group full-width">
+                                <label>Exclusions</label>
+                                <textarea placeholder="What is NOT included" rows="2" class="terms-excluded">Civil works and foundations
+Supply of materials not in BOM
+Modifications to customer design
+Services beyond warranty period</textarea>
+                            </div>
+                            <div class="form-group full-width">
+                                <label>Assumptions & Special Terms</label>
+                                <textarea placeholder="Any assumptions or special conditions" rows="2" class="terms-assumptions">Quote assumes standard site conditions and access
+Expedited delivery available at 15% additional cost
+Extended warranty available (annual maintenance package)</textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. NOTES - SEPARATED BY TYPE -->
+                <div class="collapsible-section">
+                    <div class="section-header">
+                        <h2>
+                            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                            Notes & Instructions
+                        </h2>
+                    </div>
+                    <div class="section-content">
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <label>Customer-Facing Notes (will appear in PDF)</label>
+                                <textarea placeholder="Notes visible to customer in proposal" rows="2" class="notes-customer">Urgent follow-up required. Client prefers early delivery - expedited timeline appreciated. Ready to support accelerated implementation.</textarea>
+                            </div>
+                            <div class="form-group full-width">
+                                <label style="color: #666;">Internal Notes (NEVER visible to customer)</label>
+                                <textarea placeholder="Internal notes for sales team only" rows="2" class="notes-internal" style="border-left: 3px solid #ef4444;">Key decision maker: Rajesh Kumar. Schedule demo after approval.</textarea>
+                            </div>
+                            <div class="form-group full-width">
+                                <label style="color: #666;">Special Commercial Instructions (NEVER visible to customer)</label>
+                                <textarea placeholder="Internal commercial instructions" rows="2" class="notes-commercial" style="border-left: 3px solid #ef4444;">Max discount: 5%. Check credit limit before final approval.</textarea>
+                            </div>
+                            <div class="form-group full-width">
+                                <label>Technical Clarifications (for internal reference)</label>
+                                <textarea placeholder="Technical notes and clarifications" rows="2" class="notes-technical">Confirm 132kV source availability. Check oil specifications for IED cooling.</textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Management Tab -->
+        <section class="tab-content" data-tab="project-management">
+            <div class="content-header">
+                <h1>Project Management</h1>
+                <button class="btn btn-primary">+ New Project</button>
+            </div>
+
+            <div class="filters-bar">
+                <input type="text" placeholder="Search projects..." class="search-input">
+                <select class="filter-select">
+                    <option>All Status</option>
+                    <option>Planning</option>
+                    <option>In Progress</option>
+                    <option>On Hold</option>
+                    <option>Completed</option>
+                </select>
+            </div>
+
+            <div class="table-container">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Project ID</th>
+                            <th>Project Name</th>
+                            <th>Customer</th>
+                            <th>Product</th>
+                            <th>Status</th>
+                            <th>Progress</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>Budget</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Data will be populated by script-new.js -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Product Registrations Tab -->
+        <section class="tab-content" data-tab="product-registrations">
+            <div class="content-header">
+                <h1>Product Registrations</h1>
+                <button class="btn btn-primary">+ Register Product</button>
+            </div>
+
+            <div class="filters-bar">
+                <input type="text" placeholder="Search products..." class="search-input">
+                <select class="filter-select">
+                    <option>All Categories</option>
+                    <option>AIS</option>
+                    <option>GIS</option>
+                    <option>Reactors</option>
+                    <option>Protection & Control</option>
+                </select>
+            </div>
+
+            <div class="table-container">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Product ID</th>
+                            <th>Product Name</th>
+                            <th>Category</th>
+                            <th>Voltage</th>
+                            <th>Specifications</th>
+                            <th>Status</th>
+                            <th>Date Registered</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>PROD-001</td>
+                            <td>33kV AIS Switchgear</td>
+                            <td>AIS</td>
+                            <td>33kV</td>
+                            <td>3-Bay, 5-Step</td>
+                            <td><span class="badge badge-success">Active</span></td>
+                            <td>2026-03-15</td>
+                        </tr>
+                        <tr>
+                            <td>PROD-002</td>
+                            <td>132kV GIS Module</td>
+                            <td>GIS</td>
+                            <td>132kV</td>
+                            <td>2-Module, Compact</td>
+                            <td><span class="badge badge-success">Active</span></td>
+                            <td>2026-05-20</td>
+                        </tr>
+                        <tr>
+                            <td>PROD-003</td>
+                            <td>230kV GIS System</td>
+                            <td>GIS</td>
+                            <td>230kV</td>
+                            <td>Single-Line, Advanced</td>
+                            <td><span class="badge badge-info">Under Review</span></td>
+                            <td>2026-08-10</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Approvals Tab -->
+        <section class="tab-content" data-tab="approvals">
+            <div class="content-header">
+                <h1>Approvals</h1>
+            </div>
+
+            <div class="approval-container">
+                <div class="approval-card">
+                    <div class="approval-header">
+                        <h3>Quotation Approval - OPP-001</h3>
+                        <span class="badge badge-warning">Pending</span>
+                    </div>
+                    <div class="approval-body">
+                        <p><strong>Requested by:</strong> Priya Sharma</p>
+                        <p><strong>Quotation Value:</strong> ₹45,50,000</p>
+                        <p><strong>Date Requested:</strong> 2026-10-01</p>
+                        <p><strong>Description:</strong> Approval required for Delhi Metro Phase-3 quotation with 25% margin</p>
+                    </div>
+                    <div class="approval-actions">
+                        <button class="btn btn-success">Approve</button>
+                        <button class="btn btn-danger">Reject</button>
+                        <button class="btn btn-secondary">Request Changes</button>
+                    </div>
+                </div>
+
+                <div class="approval-card">
+                    <div class="approval-header">
+                        <h3>Discount Request - OPP-002</h3>
+                        <span class="badge badge-info">In Review</span>
+                    </div>
+                    <div class="approval-body">
+                        <p><strong>Requested by:</strong> Rajesh Kumar</p>
+                        <p><strong>Discount Requested:</strong> 15%</p>
+                        <p><strong>Reason:</strong> Large volume order, competitor pricing match</p>
+                        <p><strong>Impact:</strong> Revenue reduction ₹12,00,000</p>
+                    </div>
+                    <div class="approval-actions">
+                        <button class="btn btn-success">Approve</button>
+                        <button class="btn btn-danger">Reject</button>
+                    </div>
+                </div>
+
+                <div class="approval-card">
+                    <div class="approval-header">
+                        <h3>Project Timeline Extension</h3>
+                        <span class="badge badge-success">Approved</span>
+                    </div>
+                    <div class="approval-body">
+                        <p><strong>Project:</strong> Mumbai Smart Grid</p>
+                        <p><strong>Extension Requested:</strong> 45 days</p>
+                        <p><strong>Approved by:</strong> Finance Manager</p>
+                        <p><strong>Date Approved:</strong> 2026-09-28</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tender Analysis Tab -->
+        <section class="tab-content" data-tab="tender-analysis">
+            <div class="content-header">
+                <h1>Tender Analysis</h1>
+                <button class="btn btn-primary">+ Analyze Tender</button>
+            </div>
+
+            <div class="form-container">
+                <!-- Tender Details Section -->
+                <div class="collapsible-section expanded">
+                    <div class="section-header">
+                        <h2>
+                            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                            Tender Details
+                        </h2>
+                    </div>
+                    <div class="section-content">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label>Tender Name</label>
+                                <input type="text" value="Delhi Power Distribution Network Upgrade">
+                            </div>
+                            <div class="form-group">
+                                <label>Customer</label>
+                                <input type="text" value="Delhi Discoms">
+                            </div>
+                            <div class="form-group">
+                                <label>Submission Deadline</label>
+                                <input type="date" value="2026-11-15">
+                            </div>
+                            <div class="form-group">
+                                <label>Estimated Budget</label>
+                                <input type="text" value="₹8,50,00,000">
+                            </div>
+                            <div class="form-group">
+                                <label>Competitors</label>
+                                <input type="text" value="ABB, Siemens, Schneider Electric, L&T">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Requirements Table Section -->
+                <div class="collapsible-section expanded">
+                    <div class="section-header">
+                        <h2>
+                            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                            Technical Requirements
+                        </h2>
+                    </div>
+                    <div class="section-content">
+                        <div class="table-container">
+                            <table class="requirements-table">
+                                <thead>
+                                    <tr>
+                                        <th>Requirement</th>
+                                        <th>Type</th>
+                                        <th>Compliance</th>
+                                        <th>Risk</th>
+                                        <th>Remarks</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>132kV Switchgear</td>
+                                        <td>Technical</td>
+                                        <td><span class="badge badge-success">Compliant</span></td>
+                                        <td><span class="badge badge-success">Low</span></td>
+                                        <td>Full compliance with existing products</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Digital SCADA Integration</td>
+                                        <td>Technical</td>
+                                        <td><span class="badge badge-info">Partial</span></td>
+                                        <td><span class="badge badge-warning">Medium</span></td>
+                                        <td>Requires integration with IEC 61850</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3-Year Warranty</td>
+                                        <td>Commercial</td>
+                                        <td><span class="badge badge-success">Compliant</span></td>
+                                        <td><span class="badge badge-success">Low</span></td>
+                                        <td>Standard offering</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Make in India Preference</td>
+                                        <td>Policy</td>
+                                        <td><span class="badge badge-success">Compliant</span></td>
+                                        <td><span class="badge badge-success">Low</span></td>
+                                        <td>Manufactured in India</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Analysis Cards Section -->
+                <div class="analysis-cards">
+                    <div class="card analysis-card">
+                        <div class="card-header">
+                            <h3>Compliance Score</h3>
+                            <div class="score-badge">89%</div>
+                        </div>
+                        <div class="card-body">
+                            <p>Strong alignment with technical requirements. Minor gap in SCADA integration capability.</p>
+                        </div>
+                    </div>
+
+                    <div class="card analysis-card">
+                        <div class="card-header">
+                            <h3>Win Probability</h3>
+                            <div class="score-badge" style="background: #22C55E;">72%</div>
+                        </div>
+                        <div class="card-body">
+                            <p>Good competitive position. Price competitiveness and delivery timeline are critical factors.</p>
+                        </div>
+                    </div>
+
+                    <div class="card analysis-card">
+                        <div class="card-header">
+                            <h3>Risk Assessment</h3>
+                            <div class="score-badge" style="background: #F59E0B;">MEDIUM</div>
+                        </div>
+                        <div class="card-body">
+                            <p>Main risks: Strong competition from ABB and Siemens, potential specification changes.</p>
+                        </div>
+                    </div>
+
+                    <div class="card analysis-card">
+                        <div class="card-header">
+                            <h3>Pricing Strategy</h3>
+                            <div class="score-badge" style="background: #3B82F6;">AGGRESSIVE</div>
+                        </div>
+                        <div class="card-body">
+                            <p>Recommend 18-22% margin. Large volume justifies competitive pricing to secure win.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Risk Assessment Section -->
+                <div class="collapsible-section expanded">
+                    <div class="section-header">
+                        <h2>
+                            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                            Risk Analysis
+                        </h2>
+                    </div>
+                    <div class="section-content">
+                        <div class="risk-section">
+                            <h4>Technical Risks</h4>
+                            <ul class="risk-list">
+                                <li><strong>SCADA Integration:</strong> Requires enhanced IEC 61850 compliance - 4 week development cycle</li>
+                                <li><strong>Delivery Timeline:</strong> 24-week delivery expected but client may demand faster - expedite plan needed</li>
+                                <li><strong>Testing Requirements:</strong> Comprehensive FAT/SAT may extend project duration by 4 weeks</li>
+                            </ul>
+                        </div>
+                        <div class="risk-section">
+                            <h4>Commercial Risks</h4>
+                            <ul class="risk-list">
+                                <li><strong>Price Pressure:</strong> Budget may be reduced - recommend bundling services</li>
+                                <li><strong>Competition:</strong> ABB and Siemens likely to bid aggressively</li>
+                                <li><strong>Payment Terms:</strong> Potential 60-90 day payment cycles - cash flow impact</li>
+                            </ul>
+                        </div>
+                        <div class="risk-section">
+                            <h4>Competitor Analysis</h4>
+                            <ul class="risk-list">
+                                <li><strong>ABB:</strong> Strong in SCADA, likely to bid 15-18% lower</li>
+                                <li><strong>Siemens:</strong> Premium positioning, similar features, 10-12% higher price</li>
+                                <li><strong>Schneider Electric:</strong> Competitive in pricing, weaker service support</li>
+                                <li><strong>L&T:</strong> Local player, cost advantage, limited technical innovation</li>
+                            </ul>
+                        </div>
+                        <div class="risk-section">
+                            <h4>Suggested Winning Strategy</h4>
+                            <ul class="risk-list">
+                                <li>✓ Emphasize superior SCADA capabilities and local R&D invest
+ment</li>
+                                <li>✓ Offer value-added services: on-site training, 24/7 support, 5-year warranty</li>
+                                <li>✓ Propose phased implementation to manage cash flow</li>
+                                <li>✓ Highlight Make in India advantage and local job creation</li>
+                                <li>✓ Price aggressively (20% margin) but offer performance guarantees</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Features Tab -->
+        <section class="tab-content" data-tab="ai-features">
+            <div class="content-header">
+                <h1>AI-Powered Features</h1>
+            </div>
+
+            <div class="ai-features-grid">
+                <div class="ai-card">
+                    <div class="ai-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="1"></circle>
+                            <path d="M12 1v6m0 6v6M4.22 4.22l4.24 4.24m2.98 2.98l4.24 4.24M1 12h6m6 0h6m-17.78 7.78l4.24-4.24m2.98-2.98l4.24-4.24"></path>
+                        </svg>
+                    </div>
+                    <h3>Similar Tender Finder</h3>
+                    <p>AI-powered search to find similar past tenders and analyze historical win rates, pricing, and strategies.</p>
+                    <button class="btn btn-secondary btn-full">Launch Tool</button>
+                </div>
+
+                <div class="ai-card">
+                    <div class="ai-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2v6m0 6v6M3 12h6m6 0h6"></path>
+                            <circle cx="12" cy="12" r="10"></circle>
+                        </svg>
+                    </div>
+                    <h3>Technical Copilot</h3>
+                    <p>AI assistant for technical specifications, compliance checking, and product recommendations.</p>
+                    <button class="btn btn-secondary btn-full">Launch Tool</button>
+                </div>
+
+                <div class="ai-card">
+                    <div class="ai-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                            <path d="M16 11h6M19 8v6"></path>
+                        </svg>
+                    </div>
+                    <h3>Customer Intelligence</h3>
+                    <p>Analyze customer patterns, preferences, and buying behavior to score leads and predict outcomes.</p>
+                    <button class="btn btn-secondary btn-full">Launch Tool</button>
+                </div>
+
+                <div class="ai-card">
+                    <div class="ai-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                    </div>
+                    <h3>Offer Strategy Advisor</h3>
+                    <p>AI recommendations for pricing, margin optimization, and competitive positioning based on market data.</p>
+                    <button class="btn btn-secondary btn-full">Launch Tool</button>
+                </div>
+
+                <div class="ai-card">
+                    <div class="ai-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="12" y1="11" x2="12" y2="17"></line>
+                            <line x1="9" y1="14" x2="15" y2="14"></line>
+                        </svg>
+                    </div>
+                    <h3>T&C Negotiator</h3>
+                    <p>AI-assisted negotiation support for terms and conditions, highlighting risks and favorable clauses.</p>
+                    <button class="btn btn-secondary btn-full">Launch Tool</button>
+                </div>
+
+                <div class="ai-card">
+                    <div class="ai-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="12 3 20 7.5 20 16.5 12 21 4 16.5 4 7.5 12 3"></polyline>
+                            <line x1="12" y1="12" x2="20" y2="7.5"></line>
+                            <line x1="12" y1="12" x2="12" y2="21"></line>
+                            <line x1="12" y1="12" x2="4" y2="7.5"></line>
+                        </svg>
+                    </div>
+                    <h3>Project Handover</h3>
+                    <p>Streamlined handover documentation and checklist generation from won opportunities to project management.</p>
+                    <button class="btn btn-secondary btn-full">Launch Tool</button>
+                </div>
+            </div>
+
+            <div class="coming-soon">
+                <h2>Coming Soon</h2>
+                <p>These AI features are currently in development. Click the buttons above to preview the planned interfaces.</p>
+            </div>
+        </section>
+
+        <!-- Reference Tab -->
+        <section class="tab-content" data-tab="reference">
+            <div class="content-header">
+                <h1>Reference</h1>
+            </div>
+
+            <div class="reference-container">
+                <div class="reference-section">
+                    <h2>Products Reference</h2>
+                    <div class="reference-grid">
+                        <div class="reference-card">
+                            <h4>Air Insulated Switchgear (AIS)</h4>
+                            <ul>
+                                <li>33kV AIS - 3 Bay</li>
+                                <li>66kV AIS - 5 Bay</li>
+                                <li>110kV AIS - 7 Bay</li>
+                                <li>High reliability equipment</li>
+                                <li>Competitive pricing</li>
+                            </ul>
+                        </div>
+                        <div class="reference-card">
+                            <h4>Gas Insulated Switchgear (GIS)</h4>
+                            <ul>
+                                <li>132kV GIS - Single Line</li>
+                                <li>220kV GIS - Double Line</li>
+                                <li>380kV GIS - Compact</li>
+                                <li>Space-efficient solution</li>
+                                <li>Premium quality assurance</li>
+                            </ul>
+                        </div>
+                        <div class="reference-card">
+                            <h4>Protection & Control</h4>
+                            <ul>
+                                <li>Intelligent Electronic Devices (IED)</li>
+                                <li>SCADA Systems</li>
+                                <li>IEC 61850 Compliant</li>
+                                <li>Advanced diagnostics</li>
+                                <li>Real-time monitoring</li>
+                            </ul>
+                        </div>
+                        <div class="reference-card">
+                            <h4>Substation Solutions</h4>
+                            <ul>
+                                <li>Turnkey substation packages</li>
+                                <li>Custom configurations</li>
+                                <li>Integration services</li>
+                                <li>On-site commissioning</li>
+                                <li>Training & support</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reference-section">
+                    <h2>Quick Links & Documents</h2>
+                    <div class="links-list">
+                        <a href="#" class="reference-link">Product Catalog 2024</a>
+                        <a href="#" class="reference-link">Technical Specifications</a>
+                        <a href="#" class="reference-link">Standard T&C Templates</a>
+                        <a href="#" class="reference-link">Pricing Guidelines</a>
+                        <a href="#" class="reference-link">Compliance & Certifications</a>
+                        <a href="#" class="reference-link">Training Materials</a>
+                        <a href="#" class="reference-link">FAQ & Support</a>
+                        <a href="#" class="reference-link">Customer Testimonials</a>
+                    </div>
+                </div>
+
+                <div class="reference-section">
+                    <h2>Key Metrics & Standards</h2>
+                    <div class="reference-grid">
+                        <div class="reference-card">
+                            <h4>Quality Standards</h4>
+                            <ul>
+                                <li>ISO 9001:2015</li>
+                                <li>IEC 62271-100</li>
+                                <li>IEC 61850-8-1</li>
+                                <li>IP Protocol Certified</li>
+                            </ul>
+                        </div>
+                        <div class="reference-card">
+                            <h4>Performance Metrics</h4>
+                            <ul>
+                                <li>Avg. Delivery: 20-24 weeks</li>
+                                <li>Quality Score: 98.5%</li>
+                                <li>On-time Delivery: 96%</li>
+                                <li>Customer Satisfaction: 4.8/5</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+    <!-- HTML2PDF Library for PDF generation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <!-- Offer PDF Generator -->
+    <script src="offer-pdf-generator.js"></script>
+    <script>
+    // Another layer of verification
+    console.log('=== HTML Script Tag Executed ===');
+    
+    // Show when script loads
+    window.addEventListener('load', function() {
+        const debugEl = document.getElementById('debug-status');
+        if (debugEl) {
+            debugEl.innerHTML = '✓ Script Loaded<br>✓ Try clicking tabs<br>Check console (F12)';
+            debugEl.style.background = '#22C55E';
+        }
+    });
+    
+    // Listen for tab clicks
+    document.addEventListener('click', function(e) {
+        if (e.target.classList.contains('nav-tab')) {
+            console.log('TAB CLICKED:', e.target.getAttribute('data-tab'));
+        }
+    }, true);
+    
+    // Test function: Auto-test all tabs after a delay
+    window.autoTestAllTabs = function() {
+        const tabs = Array.from(document.querySelectorAll('.nav-tab'));
+        const tabNames = tabs.map(t => t.getAttribute('data-tab'));
+        
+        console.clear();
+        console.log('🧪 AUTO-TESTING ALL TABS\n');
+        console.log('Tabs to test:', tabNames);
+        console.log('\nClicking each tab...\n');
+        
+        let delay = 0;
+        tabNames.forEach((tabName, idx) => {
+            setTimeout(() => {
+                const btn = document.querySelector(`[data-tab="${tabName}"].nav-tab`);
+                console.log(`\n--- Tab ${idx + 1}/${tabNames.length}: ${tabName} ---`);
+                if (btn) {
+                    btn.click();
+                    console.log('✅ Clicked');
+                } else {
+                    console.error('❌ Button not found');
+                }
+            }, delay * 1500);
+            delay++;
+        });
+        
+        console.log('\n✨ Test starting...');
+    };
+    
+    console.log('💡 Run autoTestAllTabs() in console to test all tabs automatically');
+    </script>
+</body>
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GridMaster - Tab Navigation Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+            padding: 20px;
+        }
+        .test-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #08152f;
+            border-bottom: 2px solid #2563eb;
+            padding-bottom: 10px;
+        }
+        .test-section {
+            background: #f9f9f9;
+            padding: 15px;
+            margin: 15px 0;
+            border-left: 4px solid #2563eb;
+            border-radius: 4px;
+        }
+        .test-section h2 {
+            margin-top: 0;
+            color: #08152f;
+            font-size: 18px;
+        }
+        .instructions {
+            background: #e3f2fd;
+            border: 1px solid #2196F3;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+        .instructions li {
+            margin: 8px 0;
+        }
+        .code-block {
+            background: #222;
+            color: #0f0;
+            padding: 12px;
+            border-radius: 4px;
+            font-family: monospace;
+            overflow-x: auto;
+            margin: 10px 0;
+        }
+        button {
+            background: #08152f;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            margin: 5px 5px 5px 0;
+        }
+        button:hover {
+            background: #2563eb;
+        }
+        .status {
+            padding: 10px;
+            border-radius: 4px;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        .status.success {
+            background: #c8e6c9;
+            color: #2e7d32;
+        }
+        .status.error {
+            background: #ffcdd2;
+            color: #c62828;
+        }
+        .status.info {
+            background: #bbdefb;
+            color: #1565c0;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>🔍 GridMaster Tab Navigation Troubleshooting</h1>
+        
+        <div class="test-section">
+            <h2>Quick Fix (Try This First)</h2>
+            <div class="instructions">
+                <ol>
+                    <li><strong>Clear browser cache:</strong>
+                        <ul>
+                            <li>Press <code>Ctrl+Shift+Delete</code> (Windows/Linux) or <code>Cmd+Shift+Delete</code> (Mac)</li>
+                            <li>Select "Cached images and files" → Click "Clear"</li>
+                        </ul>
+                    </li>
+                    <li><strong>Force refresh the page:</strong> <code>Ctrl+F5</code> (or <code>Cmd+Shift+R</code> on Mac)</li>
+                    <li><strong>Test the Approvals tab:</strong> Does it now show content?</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>📊 Run Diagnostics</h2>
+            <p>Open Developer Tools (F12) → Console tab → Run this command:</p>
+            <div class="code-block">
+runTabDiagnostics()
+            </div>
+            <p><strong>Expected Output:</strong> You should see 9 tabs listed:</p>
+            <div class="code-block">
+✓ opportunities → FOUND
+✓ dashboard → FOUND
+✓ fcm-sheet → FOUND
+✓ project-management → FOUND
+✓ product-registrations → FOUND
+✓ approvals → FOUND
+✓ tender-analysis → FOUND
+✓ ai-features → FOUND
+✓ reference → FOUND
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>🧪 Auto-Test All Tabs</h2>
+            <p>This will automatically click through each tab and show detailed logs:</p>
+            <button onclick="testAllTabs()">Start Auto-Test</button>
+            <div id="test-output" style="background: #222; color: #0f0; padding: 12px; margin-top: 10px; border-radius: 4px; font-family: monospace; min-height: 100px; display: none; overflow-y: auto; max-height: 300px;"></div>
+        </div>
+
+        <div class="test-section">
+            <h2>🔧 Manual Tab Click Test</h2>
+            <p>Click individual buttons to test each tab:</p>
+            <div id="button-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px;"></div>
+        </div>
+
+        <div class="test-section">
+            <h2>🐛 Detailed Debugging</h2>
+            <p>Open Developer Tools Console (F12) and you'll see detailed initialization logs:</p>
+            <div class="code-block">
+📊 DOM Structure Check:
+   ✓ Found 9 nav buttons
+   ✓ Found 9 content sections
+
+📋 Content Sections:
+   1. opportunities      | active: ✓ | display: block | content: ✓
+   2. dashboard          | active: ✗ | display: none  | content: ✓
+   ...
+
+🎯 Approvals Tab Specific Check:
+   Section element: ✓ Found
+   Button element: ✓ Found
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>📝 What to Check</h2>
+            <div class="instructions">
+                <h3>If tabs still don't work:</h3>
+                <ol>
+                    <li>Open Console (F12)</li>
+                    <li>Look for any RED ERROR messages</li>
+                    <li>Take a screenshot of the errors</li>
+                    <li>Run <code>runTabDiagnostics()</code> and share the output</li>
+                    <li>Run <code>autoTestAllTabs()</code> and share the test results</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>💾 Clear Saved State</h2>
+            <button onclick="clearLocalStorage()">Clear Browser Storage</button>
+            <div id="clear-status"></div>
+            <p style="font-size: 12px; color: #666; margin-top: 10px;">This removes any saved tab state that might interfere with navigation</p>
+        </div>
+
+        <div class="test-section">
+            <h2>ℹ️ System Information</h2>
+            <div id="system-info" style="font-size: 12px;">
+                <p>Browser: <span id="browser"></span></p>
+                <p>User Agent: <span id="ua" style="word-break: break-all; font-size: 10px;"></span></p>
+                <p>Screen Resolution: <span id="screen"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Display system info
+        document.getElementById('browser').textContent = navigator.userAgent.split('/')[navigator.userAgent.split('/').length - 1];
+        document.getElementById('ua').textContent = navigator.userAgent;
+        document.getElementById('screen').textContent = `${window.innerWidth}x${window.innerHeight}`;
+
+        function clearLocalStorage() {
+            localStorage.clear();
+            document.getElementById('clear-status').innerHTML = '<div class="status success">✅ Browser storage cleared! Page will refresh in 2 seconds...</div>';
+            setTimeout(() => location.reload(), 2000);
+        }
+
+        function testAllTabs() {
+            const output = document.getElementById('test-output');
+            output.style.display = 'block';
+            let log = '🧪 AUTO-TESTING ALL TABS\n\n';
+            output.textContent = log;
+
+            const tabs = Array.from(document.querySelectorAll('button[data-tab]') || []);
+            const tabNames = tabs.map(t => t.getAttribute('data-tab'));
+
+            log += `Found ${tabNames.length} tabs to test:\n${tabNames.join(', ')}\n\n`;
+            output.textContent = log;
+
+            let delay = 0;
+            tabNames.forEach((tabName, idx) => {
+                setTimeout(() => {
+                    log += `\n--- ${idx + 1}/${tabNames.length}: Testing "${tabName}" ---\n`;
+                    const btn = document.querySelector(`button[data-tab="${tabName}"]`);
+                    
+                    if (btn) {
+                        btn.click();
+                        const section = document.querySelector(`section[data-tab="${tabName}"]`);
+                        const display = section ? window.getComputedStyle(section).display : 'NOT FOUND';
+                        log += `✅ Button clicked\n`;
+                        log += `📍 Section display style: ${display}\n`;
+                        if (section && section.classList.contains('active')) {
+                            log += `✓ Active class applied\n`;
+                        } else {
+                            log += `✗ Active class NOT applied\n`;
+                        }
+                    } else {
+                        log += `❌ Button not found!\n`;
+                    }
+                    
+                    output.textContent = log;
+                    output.scrollTop = output.scrollHeight;
+                }, delay * 1500 + 500);
+                delay++;
+            });
+
+            log += '\n✨ Testing complete!\n';
+        }
+
+        function createButtonTest() {
+            const container = document.getElementById('button-container');
+            const tabs = Array.from(document.querySelectorAll('button[data-tab]') || []);
+            
+            tabs.forEach(originalBtn => {
+                const tabName = originalBtn.getAttribute('data-tab');
+                const btn = document.createElement('button');
+                btn.textContent = tabName.replace('-', ' ').toUpperCase();
+                btn.onclick = () => {
+                    const targetBtn = document.querySelector(`button[data-tab="${tabName}"]`);
+                    if (targetBtn) {
+                        targetBtn.click();
+                        console.log(`✅ Clicked tab button: ${tabName}`);
+                    }
+                };
+                container.appendChild(btn);
+            });
+
+            if (tabs.length === 0) {
+                container.innerHTML = '<p>⚠️ No tabs found in main page. This page works independently for testing.</p>';
+            }
+        }
+
+        // Initialize on load
+        window.addEventListener('load', () => {
+            createButtonTest();
+            setTimeout(() => {
+                console.log('💡 Test page loaded. You can now:');
+                console.log('1. Click buttons above to test tabs');
+                console.log('2. Run: runTabDiagnostics()');
+                console.log('3. Run: autoTestAllTabs()');
+            }, 100);
+        });
+    </script>
+</body>
+</html>
